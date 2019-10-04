@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		var imagenActual = 0;
+		var imagen = ['img/punta_cana_1.jpg','img/punta_cana_2.jpg','img/punta_cana_3.jpg']
+		window.onload = function() {
+			//activar un listener sobre todo el documento
+			document.getElementById('imagen').addEventListener('click', cambiarImagen);
+		}
+			
+		function cambiarImagen() {
+			document.getElementById('imagen').src=imagen[imagenActual-1]
+			(imagenActual<3) ? imagenActual+=1 : imagenActual=0;
+		}
+</script>
+</head>
+<body>
+		<p>Click en la imagen para cambiar</p>
+		<img id='imagen' src='img/punta_cana_1.jpg'>
+</body>
+</html>
